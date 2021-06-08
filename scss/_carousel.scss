@@ -1,0 +1,120 @@
+.section-three {
+  position: relative;
+  height: 45rem;
+  background-color: $colorBG;
+  padding-top: 3rem;
+
+  &__title {
+    text-align: center;
+  }
+
+  &--carousel__container {
+    width: 100vw;
+    position: relative;
+    margin: 3rem auto 0;
+    max-width: 1170px;
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__carousel {
+    @extend %flex-row;
+    width: 100vw;
+
+    &--obj {
+      position: relative;
+      width: 32%;
+      height: 500px;
+      background-color: $colorWhite;
+      @extend %flex-col;
+    }
+  }
+}
+
+.obj {
+  &--title {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(28, 28, 27);
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-top: 2rem;
+    font-weight: 500;
+  }
+  &--foto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__info {
+    height: 4.5rem;
+    width: 100%;
+    @extend %flex-row;
+    border: 1px solid #e1e1e1;
+    text-transform: uppercase;
+
+    &--price {
+      background-color: #e1e1e1;
+      color: rgb(28, 28, 27);
+      height: 100%;
+      width: 70%;
+      font-size: 18px;
+      @extend %flex-row;
+      padding-left: 2rem;
+    }
+
+    &--btn {
+      background: #6e774a;
+      height: 100%;
+      width: 30%;
+      border: none;
+      color: $colorWhite;
+      font-size: 1.25rem;
+      @extend %flex-row;
+      justify-content: space-around;
+      padding: 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.slider-btn {
+  position: absolute;
+  bottom: 2%;
+  transform: translateY(-50%);
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: 1;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.slider-prev {
+  left: 47%;
+}
+
+.slider-next {
+  right: 47%;
+}
+
+// @media screen and (max-width: 1024px) and (min-width: 769px) {
+//   * {
+//     font-size: 1rem;
+//   }
+// }
+
+// @media screen and (max-width: 768px) and (min-width: 320px) {
+//   * {
+//     font-size: 0.9rem;
+//   }
+// }

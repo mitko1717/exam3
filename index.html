@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>CBD</title>
+  </head>
+  <body>
+    <header id="section-one" class="section-one section header">
+      <div class="section-one__heading">
+        <ul class="section-one__heading--navigation">
+          <a
+            href="#section-one"
+            data-section="section-one"
+            class="section-one__heading--navigation__item active"
+            >home</a
+          >
+          <a
+            href="#section-two"
+            data-section="section-two"
+            class="section-one__heading--navigation__item"
+            >info</a
+          >
+          <a
+            data-section="section-three"
+            class="section-one__heading--navigation__item products"
+            >products</a
+          >
+          <a
+            data-section="section-four"
+            class="section-one__heading--navigation__item faqs"
+            >faqs</a
+          >
+          <a
+            href="#section-five"
+            data-section="section-five"
+            class="section-one__heading--navigation__item"
+            >feedback</a
+          >
+          <a
+            href="#section-six"
+            data-section="section-six"
+            class="section-one__heading--navigation__item"
+            >contacts</a
+          >
+        </ul>
+
+        <div class="section-one__heading--logo">cbd</div>
+
+        <ul class="section-one__heading--userBlock">
+          <li class="section-one__heading--userBlock__item login">login</li>
+          <li class="section-one__heading--userBlock__item searchBtn">
+            <i class="fa fa-search" aria-hidden="true"></i> search
+          </li>
+          <li class="section-one__heading--userBlock__item">cart</li>
+        </ul>
+      </div>
+
+      <div class="section-one__menu-icon">
+        <div class="section-one__menu-icon__middle"></div>
+      </div>
+
+      <div class="section-one__content">
+        <h1 class="section-one__content--title">
+          Enhancing Life Excelling in Care
+        </h1>
+        <h4 class="section-one__content--subtitle">
+          Choose Wisely. Choose CBD.
+        </h4>
+        <div class="section-one__content--transfer transfer1">
+          <div class="section-one__content--transfer__text">Start Shopping</div>
+          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+          <img src="img/line.png" alt="line" class="notactive" />
+        </div>
+        <div class="section-one__content--transfer transfer2">
+          <div class="section-one__content--transfer__text">
+            See all products
+          </div>
+          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+          <img src="img/line.png" alt="line" class="notactive" />
+        </div>
+      </div>
+
+      <div class="section-one__arrow-down">
+        <img src="img/arrowDown.png" alt="arrowDown" />
+      </div>
+
+      <div id="modal" class="modal">
+        <div class="modal__inner">
+          <div class="modal__inner--enter">
+            <h3 id="login" class="modal__inner--login tabcontent activeEnter">
+              SIGN IN
+            </h3>
+            <h3 id="newAcc" class="modal__inner--newAcc tabcontent">
+              CREATE ACCOUNT
+            </h3>
+          </div>
+          <form id="login" class="modal__inner--form loginForm">
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button class="section-one__btn modal__inner--form__loginFormBtn">
+              LOGIN
+            </button>
+          </form>
+
+          <form id="newAcc" class="modal__inner--form newAccForm notActiveForm">
+            <input type="text" placeholder="Nickname" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button class="section-one__btn">LOGIN</button>
+          </form>
+        </div>
+        <div class="modal__close">X</div>
+      </div>
+
+      <form id="search" class="search">
+        <input type="search" placeholder="search" class="search__input" />
+        <button class="search__btn">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+    </header>
+
+    <section id="section-two" class="section-two section">
+      <div class="section-two__banner">
+        <h3 class="section-two__banner--title">we are what we are</h3>
+        <img class="section-two__banner--adv" src="img/advantages.png" alt="" />
+      </div>
+
+      <section class="container">
+        <div class="tabs">
+          <div class="tabs__box">
+            <div class="whatIsCBD tabs__section tabs__active">
+              <h4 class="tabs__title button" data-value="1">what is cbd</h4>
+            </div>
+            <div class="benefits tabs__section">
+              <h4 class="tabs__title button" data-value="2">benefits</h4>
+            </div>
+            <div class="difference tabs__section">
+              <h4 class="tabs__title button" data-value="3">our difference</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="description">
+          <div class="information-tab">
+            <div class="information-tab__left tab--1 activeTab">
+              <h3 class="information-tab__left--title title">
+                WHAT IT IS AND HOW IT WORKS
+              </h3>
+              <h3 class="information-tab__left--text">
+                CBD is short for cannabidiol. It is a phytocannabinoid found in
+                hemp and known for supporting the body and mind in many ways.*
+                Charlotte’s Web products have cannabinoids with CBD extract.
+                <br /><br />Not to be confused with oil from hemp seeds (which
+                doesn’t contain cannabinoids), CBD comes from the flowers and
+                leaves of the hemp plant.<br /><br />Why does CBD work? The
+                human body has a vast network of receptors, the endocannabinoid
+                system.
+              </h3>
+            </div>
+
+            <div class="information-tab__left tab--2">
+              <h3 class="information-tab__left--title title">
+                WHY U SHOULD USE IT
+              </h3>
+              <h3 class="information-tab__left--text">
+                Not to be confused with oil from hemp seeds (which doesn’t
+                contain cannabinoids), CBD comes from the flowers and leaves of
+                the hemp plant.<br /><br />Why does CBD work? The human body has
+                a vast network of receptors, the endocannabinoid system. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+                dicta omnis?<br /><br />
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex,
+                nam.
+              </h3>
+            </div>
+
+            <div class="information-tab__left tab--3">
+              <h3 class="information-tab__left--title title">
+                WHY WE ARE THE BEST
+              </h3>
+              <h3 class="information-tab__left--text">
+                CBD is short for cannabidiol.<br />
+                It is a phytocannabinoid found in hemp and known for supporting
+                the body and mind in many ways.* Charlotte’s Web products have
+                cannabinoids with CBD extract. <br /><br />
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Quos.<br /><br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto, accusamus est?
+              </h3>
+            </div>
+
+            <div class="information-tab__right active-tab">
+              <div class="img-1 information-tab__right--foto">
+                <img src="img/img1.png" alt="mountain" />
+              </div>
+              <div class="img-2 information-tab__right--foto">
+                <img src="img/img2.png" alt="field" />
+              </div>
+            </div>
+          </div>
+
+          <div class="benefits-tab notactive">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Necessitatibus placeat rem quis excepturi in dignissimos officiis,
+            quia impedit earum quos doloribus repudiandae deleniti reprehenderit
+            illum, id, dolores voluptatibus voluptas sit. <br />
+          </div>
+          <div class="difference-tab notactive">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+            quaerat distinctio, quae perspiciatis atque blanditiis natus velit,
+            deleniti et corporis ex! Voluptatum, voluptates minima. Eius
+            dignissimos est autem tempore omnis. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. <br />
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="section-three" class="section-three section">
+      <h3 class="section-three__title title">CBD Featured Products</h3>
+
+      <div class="section-three--carousel__container"></div>
+      <section class="section-three__carousel">
+        <div class="section-three__carousel--obj obj1">
+          <div class="obj--title">CBD 500 mg Orange Flavor Tincture</div>
+          <div class="obj--foto"><img src="img/с1.png" alt="" /></div>
+
+          <div class="obj__info">
+            <p class="obj__info--price">$49.99 USD</p>
+            <button class="obj__info--btn">
+              <p class="section-five__text">SHOP</p>
+              <img src="img/line.png" alt="line" />
+            </button>
+          </div>
+        </div>
+
+        <div class="section-three__carousel--obj obj2">
+          <div class="obj--title">Black ICE CBD Muscle Rub 200 mg</div>
+          <div class="obj--foto"><img src="img/с2.png" alt="" /></div>
+
+          <div class="obj__info">
+            <p class="obj__info--price">$49.99 USD</p>
+            <button class="obj__info--btn">
+              <p class="section-five__text">SHOP</p>
+              <img src="img/line.png" alt="line" />
+            </button>
+          </div>
+        </div>
+
+        <div class="section-three__carousel--obj obj3">
+          <div class="obj--title">CBD+Curcumin Coffee 750 mg</div>
+          <div class="obj--foto"><img src="img/с3.png" alt="" /></div>
+          <div class="obj__info">
+            <p class="obj__info--price">$79.99 USD</p>
+            <button class="obj__info--btn">
+              <p class="section-five__text">SHOP</p>
+              <img src="img/line.png" alt="line" />
+            </button>
+          </div>
+        </div>
+
+        <button class="slider-btn slider-prev">
+          <img class="slider-btn__prev" src="img/arrl.png" />
+        </button>
+
+        <button class="slider-btn slider-next">
+          <img class="slider-btn__next" src="img/arrr.png" />
+        </button>
+      </section>
+    </section>
+
+    <section id="section-four" class="section-four section">
+      <h3 class="section-four__title title">Frequently asked questions</h3>
+      <div class="section-four__questions">
+        <div class="section-four__questions--ques ques1">
+          What is Cannabidiol (CBD)?
+        </div>
+        <div class="section-four__questions--answer answer1 notactive">
+          Research has shown that CBD is a very powerful painkiller and
+          anti-inflammatory.
+        </div>
+
+        <div class="section-four__questions--ques ques2">
+          Is Hemp-Derived Cannabidiol (CBD) Legal?
+        </div>
+        <div class="section-four__questions--answer answer2 notactive">
+          Because CBD from hemp has no psychoactive effects, the purchase, or
+          possession of hemp CBD products are completely legal in all 50 States.
+        </div>
+
+        <div class="section-four__questions--ques ques3">
+          Are there any negative side effects?
+        </div>
+        <div class="section-four__questions--answer answer3 notactive">
+          When applied topically, CBD also can help relax blood vessels to
+          increase blood flow to your sexy bits to enhance arousal.
+        </div>
+
+        <div class="section-four__questions--ques ques4">
+          Do you offer a return policy?
+        </div>
+        <div class="section-four__questions--answer answer4 notactive">
+          Most of the human studies use dosages anywhere between 20 and 1,500
+          milligrams (mg) per day. It's worth remembering that.
+        </div>
+      </div>
+    </section>
+
+    <section id="section-five" class="section-five section">
+      <p class="section-five__text">
+        I have tried another product after using this one successfully, and I am
+        Back for good! The flavour, the lightness of the oil and the health
+        benefits I have gotten with this oil are amazing!
+      </p>
+      <div class="section-five__author">
+        <img src="img/line.png" alt="line" />
+        <div class="section-five__author--text">MARK J</div>
+      </div>
+
+      <div class="section-five__arrows">
+        <button class="section-five__arrows--leftArr">
+          <img class="arrow" src="img/greenLeftArrow.png" alt="" />
+        </button>
+        <button class="section-five__arrows--rightArr">
+          <img class="arrow" src="img/greenArrRight.png" alt="" />
+        </button>
+      </div>
+    </section>
+
+    <section id="section-six" class="section-six footer section">
+      <div class="section-six__title">
+        <img class="section-six__line" src="img/green-line.png" alt="line" />
+        <h2 class="section-six__title--cbd">CBD</h2>
+        <img class="section-six__line" src="img/green-line.png" alt="line" />
+      </div>
+
+      <div class="section-six__navigation">
+        <ul class="section-six__navigation--left">
+          <li>privacy policy</li>
+          <li>terms of use</li>
+          <li>return policy</li>
+        </ul>
+
+        <div class="section-six__navigation--social">
+          <i
+            class="fa fa-facebook section-six__navigation--social__item"
+            aria-hidden="true"
+          ></i>
+          <i
+            class="fa fa-twitter section-six__navigation--social__item"
+            aria-hidden="true"
+          ></i>
+          <i
+            class="fa fa-youtube-play section-six__navigation--social__item"
+            aria-hidden="true"
+          ></i>
+        </div>
+
+        <ul class="section-six__navigation--right">
+          <li>info</li>
+          <li>exchanges</li>
+          <li>contact</li>
+        </ul>
+      </div>
+
+      <div class="section-six__email">
+        <h4 class="section-six__email--title">subscribe to newsletter</h4>
+        <form class="section-six__form">
+          <input type="email" placeholder="Email" required />
+          <button class="section-six__btn">
+            <img src="img/arrr.png" alt="" />
+          </button>
+        </form>
+      </div>
+      <p class="section-six__sign">© 2018. CbD health.</p>
+    </section>
+
+    <script src="js/App.js"></script>
+  </body>
+</html>

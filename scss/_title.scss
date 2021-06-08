@@ -1,0 +1,28 @@
+.title {
+  font-size: 1.9rem;
+  color: rgb(28, 28, 27);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .title {
+    font-size: 1.6rem;
+    letter-spacing: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .title {
+    font-size: 1.4rem;
+    letter-spacing: 0.15rem;
+  }
+}

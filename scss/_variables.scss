@@ -1,0 +1,20 @@
+$colorGreenish: #ced6af;
+$colorBG: #f7f8f3;
+$colorWhite: rgb(255, 255, 255);
+// $colorDark: rgb(44, 64, 88);
+$ffMain: 'Oswald';
+// $ffMon: 'Montserrat';
+
+%flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+%flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}

@@ -1,0 +1,112 @@
+.section-five {
+  position: relative;
+  height: 50rem;
+  @extend %flex-col;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/bg-img2.png);
+  background-position: center;
+
+  &__text {
+    font-size: 1.25rem;
+    line-height: 1.818;
+    text-align: center;
+    width: 45rem;
+    margin: 0 auto;
+    font-weight: 200;
+    letter-spacing: 0.3rem;
+  }
+
+  &__author {
+    @extend %flex-row;
+    width: 10rem;
+    height: 1.7rem;
+    margin: 1rem 0 0;
+
+    &--text {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      line-height: 3.125;
+      letter-spacing: 4px;
+      font-weight: 300;
+      width: 100%;
+      margin-left: 1rem;
+    }
+  }
+
+  &__arrows {
+    position: absolute;
+    bottom: 0;
+
+    &--leftArr {
+      background: none;
+      border: 1px solid white;
+      outline: none;
+      border-bottom: none;
+      padding: 35px;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+    }
+
+    &--rightArr {
+      background: none;
+      border: 1px solid white;
+      outline: none;
+      border-bottom: none;
+      border-left: none;
+      padding: 35px;
+      transition: all 0.2s ease-in-out;
+      margin-left: -4px;
+      &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.arrow {
+  width: 30px;
+  height: 15px;
+}
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .section-five {
+    &__text {
+      width: 80%;
+    }
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .section-five {
+    &__text {
+      font-size: 1.4rem;
+      line-height: 1.7;
+      width: 88%;
+    }
+
+    &__author {
+      &--text {
+        font-size: 1.5rem;
+        line-height: 2.725;
+        letter-spacing: 3px;
+        font-weight: 300;
+        width: 80%;
+      }
+    }
+
+    &__arrows {
+      &--leftArr {
+        padding: 25px;
+      }
+
+      &--rightArr {
+        padding: 25px;
+      }
+    }
+  }
+}
