@@ -145,7 +145,7 @@
     }
 
     &__title {
-      font-size: 3.3rem;
+      font-size: 3rem;
       width: 100%;
 
       &--cbd {
@@ -160,12 +160,12 @@
       color: rgb(110, 119, 74);
 
       &--left {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         line-height: 2.4rem;
       }
     }
     &--right {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       line-height: 2.4rem;
     }
 
@@ -205,24 +205,43 @@
       color: rgb(110, 119, 74);
 
       &--left {
-        font-size: 2rem;
+        font-size: 1rem;
         line-height: 2.4rem;
       }
-    }
-    &--right {
-      font-size: 2rem;
-      line-height: 2.4rem;
+      &--right {
+        font-size: 1rem;
+        line-height: 2.4rem;
+      }
+
+      &--social {
+        font-size: 1.3rem;
+      }
     }
 
-    &--social {
-      font-size: 1.2rem;
-    }
-  }
-  &__email {
-    margin: 1.5rem auto 0;
+    &__email {
+      margin: 1.5rem auto 0;
 
-    &--title {
-      font-size: 1.1rem;
+      &--title {
+        font-size: 1.1rem;
+      }
+    }
+
+    &__form {
+      outline: none;
+      border: 2px solid rgb(110, 119, 74);
+      font-size: 0.9rem;
+      width: 20rem;
+      height: 4rem;
+      margin: 0 auto;
+
+      & > input {
+        border: none;
+        outline: none;
+        width: 70%;
+        background: none;
+        font-size: 1.1rem;
+        padding-left: 1rem;
+      }
     }
   }
 }

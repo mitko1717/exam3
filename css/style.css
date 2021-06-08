@@ -717,9 +717,6 @@
 }
 
 @media screen and (max-width: 768px) and (min-width: 320px) {
-  * {
-    font-size: 14px;
-  }
   .section-one {
     position: relative;
   }
@@ -729,8 +726,8 @@
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     position: fixed;
-    width: 100vw;
-    height: 30%;
+    width: 100%;
+    height: 35%;
     top: 0;
     right: 0;
     left: 0;
@@ -761,20 +758,24 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 2rem 0 0;
+    margin: 2.5rem 0 0;
   }
   .section-one__heading--navigation__item {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 0 1rem;
   }
   .section-one__heading--userBlock {
     width: 100%;
-    height: 4rem;
-    margin: 0 auto 0.8rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 5rem;
+    margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.9);
   }
   .section-one__heading--userBlock__item {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    margin: 0 1rem;
   }
   .section-one__content {
     margin: 0 0;
@@ -786,15 +787,20 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
+    top: 45%;
+    left: 0;
+    -webkit-transform: translateY(-50%), translateX(-50%);
+            transform: translateY(-50%), translateX(-50%);
   }
   .section-one__content--title {
-    font-size: 2.9rem;
+    font-size: 2rem;
     line-height: 1.164;
     letter-spacing: 0.4rem;
     width: 100%;
   }
   .section-one__content--subtitle {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
   .section-one__menu-icon {
     width: 20px;
@@ -865,14 +871,51 @@
     margin: 0 auto;
     top: 45px;
     right: 0;
-    background-color: rgba(255, 255, 240, 0.98);
-    z-index: 55;
+    overflow: hidden;
+  }
+  .modal__inner--login {
+    font-size: 1.2rem;
+  }
+  .modal__inner--newAcc {
+    font-size: 1.2rem;
+  }
+  .modal__inner--form input,
+  .modal__inner--form button {
+    font-size: 1.1rem;
+  }
+  .modal__inner--form input::-webkit-input-placeholder,
+  .modal__inner--form button::-webkit-input-placeholder {
+    opacity: 0.7;
+  }
+  .modal__inner--form input:-ms-input-placeholder,
+  .modal__inner--form button:-ms-input-placeholder {
+    opacity: 0.7;
+  }
+  .modal__inner--form input::-ms-input-placeholder,
+  .modal__inner--form button::-ms-input-placeholder {
+    opacity: 0.7;
+  }
+  .modal__inner--form input::placeholder,
+  .modal__inner--form button::placeholder {
+    opacity: 0.7;
+  }
+  .modal__inner--form button {
+    font-size: 1.1rem;
+  }
+  .modal--is-visible {
+    opacity: 1;
+    display: block;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+  }
+  .modal__close {
+    font-size: 1.3rem;
   }
   .search {
     min-width: 100%;
     height: 3rem;
     top: 45px;
-    right: 0;
+    left: 0;
     background-color: rgba(255, 255, 255, 0.98);
   }
   .activeEnter {
@@ -995,6 +1038,12 @@
 
 .slider-next {
   right: 47%;
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .section-three {
+    overflow: hidden;
+  }
 }
 
 .section-four {
@@ -1223,7 +1272,7 @@
     display: none;
   }
   .section-six__title {
-    font-size: 3.3rem;
+    font-size: 3rem;
     width: 100%;
   }
   .section-six__title--cbd {
@@ -1236,11 +1285,11 @@
     color: #6e774a;
   }
   .section-six__navigation--left {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 2.4rem;
   }
   .section-six--right {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 2.4rem;
   }
   .section-six--social {
@@ -1273,21 +1322,37 @@
     color: #6e774a;
   }
   .section-six__navigation--left {
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 2.4rem;
   }
-  .section-six--right {
-    font-size: 2rem;
+  .section-six__navigation--right {
+    font-size: 1rem;
     line-height: 2.4rem;
   }
-  .section-six--social {
-    font-size: 1.2rem;
+  .section-six__navigation--social {
+    font-size: 1.3rem;
   }
-  __email {
+  .section-six__email {
     margin: 1.5rem auto 0;
   }
-  __email--title {
+  .section-six__email--title {
     font-size: 1.1rem;
+  }
+  .section-six__form {
+    outline: none;
+    border: 2px solid #6e774a;
+    font-size: 0.9rem;
+    width: 20rem;
+    height: 4rem;
+    margin: 0 auto;
+  }
+  .section-six__form > input {
+    border: none;
+    outline: none;
+    width: 70%;
+    background: none;
+    font-size: 1.1rem;
+    padding-left: 1rem;
   }
 }
 
