@@ -359,9 +359,9 @@
       &--userBlock {
         width: 100%;
         justify-content: center;
-        min-height: 20%;
+        height: 50px;
         margin: 0 auto;
-        // padding: 4rem 0 0;
+        padding: 0 0;
         background-color: rgba(0, 0, 0, 0.9);
 
         &__item {

@@ -769,8 +769,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    min-height: 20%;
+    height: 50px;
     margin: 0 auto;
+    padding: 0 0;
     background-color: rgba(0, 0, 0, 0.9);
   }
   .section-one__heading--userBlock__item {
