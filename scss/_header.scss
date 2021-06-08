@@ -347,11 +347,11 @@
 
       &--navigation {
         width: 90%;
-        height: 90%;
+        height: 80%;
         flex-direction: column;
-        margin: 2.5rem 0 0;
+        margin: 2.7rem 0 0;
         &__item {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           padding: 0 1rem;
         }
       }
@@ -359,12 +359,13 @@
       &--userBlock {
         width: 100%;
         justify-content: center;
-        height: 5rem;
+        min-height: 20%;
         margin: 0 auto;
+        // padding: 4rem 0 0;
         background-color: rgba(0, 0, 0, 0.9);
 
         &__item {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           margin: 0 1rem;
         }
       }
@@ -453,45 +454,43 @@
 
   .modal {
     min-width: 100%;
-    height: 20rem;
-    margin: 0 auto;
+    height: 17rem;
     top: 45px;
     right: 0;
-    overflow: hidden;
 
     &__inner {
       &--login {
+        cursor: pointer;
+        opacity: 0.5;
+        transition: all 0.2s ease-in-out;
         font-size: 1.2rem;
       }
 
       &--newAcc {
+        cursor: pointer;
+        opacity: 0.5;
+        transition: all 0.2s ease-in-out;
         font-size: 1.2rem;
       }
 
       &--form {
+        width: 100%;
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.2s ease-in-out;
+
         input,
         button {
-          font-size: 1.1rem;
-
-          &::placeholder {
-            opacity: 0.7;
-          }
-        }
-
-        button {
+          height: 2.5rem;
           font-size: 1.1rem;
         }
       }
     }
 
-    &--is-visible {
-      opacity: 1;
-      display: block;
-      transition: all 1s ease-out;
-    }
-
     &__close {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
+      font-weight: 300;
     }
   }
 

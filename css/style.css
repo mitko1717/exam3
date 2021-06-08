@@ -753,15 +753,15 @@
   }
   .section-one__heading--navigation {
     width: 90%;
-    height: 90%;
+    height: 80%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 2.5rem 0 0;
+    margin: 2.7rem 0 0;
   }
   .section-one__heading--navigation__item {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 0 1rem;
   }
   .section-one__heading--userBlock {
@@ -769,12 +769,12 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 5rem;
+    min-height: 20%;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.9);
   }
   .section-one__heading--userBlock__item {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0 1rem;
   }
   .section-one__content {
@@ -867,49 +867,45 @@
   }
   .modal {
     min-width: 100%;
-    height: 20rem;
-    margin: 0 auto;
+    height: 17rem;
     top: 45px;
     right: 0;
-    overflow: hidden;
   }
   .modal__inner--login {
+    cursor: pointer;
+    opacity: 0.5;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     font-size: 1.2rem;
   }
   .modal__inner--newAcc {
+    cursor: pointer;
+    opacity: 0.5;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     font-size: 1.2rem;
+  }
+  .modal__inner--form {
+    width: 100%;
+    margin-top: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   .modal__inner--form input,
   .modal__inner--form button {
+    height: 2.5rem;
     font-size: 1.1rem;
-  }
-  .modal__inner--form input::-webkit-input-placeholder,
-  .modal__inner--form button::-webkit-input-placeholder {
-    opacity: 0.7;
-  }
-  .modal__inner--form input:-ms-input-placeholder,
-  .modal__inner--form button:-ms-input-placeholder {
-    opacity: 0.7;
-  }
-  .modal__inner--form input::-ms-input-placeholder,
-  .modal__inner--form button::-ms-input-placeholder {
-    opacity: 0.7;
-  }
-  .modal__inner--form input::placeholder,
-  .modal__inner--form button::placeholder {
-    opacity: 0.7;
-  }
-  .modal__inner--form button {
-    font-size: 1.1rem;
-  }
-  .modal--is-visible {
-    opacity: 1;
-    display: block;
-    -webkit-transition: all 1s ease-out;
-    transition: all 1s ease-out;
   }
   .modal__close {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
   }
   .search {
     min-width: 100%;
