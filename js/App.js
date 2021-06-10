@@ -212,3 +212,21 @@ difference.addEventListener('click', () => {
   benefits.classList.remove('tabs__active');
   difference.classList.add('tabs__active');
 });
+
+let accordion = document.querySelector('.accordion');
+let items = accordion.querySelectorAll('.accordion__item');
+let title = accordion.querySelectorAll('.accordion__title');
+
+function toggleAccordion() {
+  let thisItem = this.parentNode;
+
+  items.forEach(item => {
+    if (thisItem == item) {
+      thisItem.classList.toggle('activeCon');
+      return;
+    }
+    item.classList.remove('activeCon');
+  });
+}
+
+title.forEach(question => question.addEventListener('click', toggleAccordion));
