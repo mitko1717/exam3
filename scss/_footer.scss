@@ -184,7 +184,7 @@
 
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .section-six {
-    height: 60vh;
+    height: 65vh;
     padding-top: 2rem;
 
     &__line {
@@ -199,7 +199,7 @@
     }
 
     &__navigation {
-      width: 95%;
+      width: 98%;
       margin: 0 auto;
       text-transform: uppercase;
       color: rgb(110, 119, 74);
@@ -214,7 +214,8 @@
       }
 
       &--social {
-        font-size: 1.3rem;
+        width: 25%;
+        font-size: 1.2rem;
       }
     }
 
@@ -236,7 +237,7 @@
       & > input {
         border: none;
         outline: none;
-        width: 70%;
+        width: 60%;
         background: none;
         font-size: 1.1rem;
         padding-left: 1rem;
