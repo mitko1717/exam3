@@ -131,6 +131,7 @@
 }
 
 .heading-fill {
+  // backdrop-filter: blur(2px);
   background: rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease-in-out;
   border-bottom: none;
@@ -505,8 +506,7 @@
     }
 
     &__close {
-      font-size: 1.5rem;
-      font-weight: 300;
+      display: none;
     }
   }
 

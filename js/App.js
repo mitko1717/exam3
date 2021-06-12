@@ -21,7 +21,7 @@ arrowDown.addEventListener('click', function () {
 
   window.scrollTo({
     top: elementPosition - 80,
-    behavior: 'smooth',
+    // behavior: 'smooth',
   });
 });
 
@@ -33,7 +33,7 @@ productsBtn.addEventListener('click', function () {
 
   window.scrollTo({
     top: elementPosition - 50,
-    behavior: 'smooth',
+    // behavior: 'smooth',
   });
 });
 
@@ -43,7 +43,7 @@ faqsBtn.addEventListener('click', function () {
 
   window.scrollTo({
     top: elementPosition - 60,
-    behavior: 'smooth',
+    // behavior: 'smooth',
   });
 });
 

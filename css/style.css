@@ -976,8 +976,7 @@
     font-size: 1.1rem;
   }
   .modal__close {
-    font-size: 1.5rem;
-    font-weight: 300;
+    display: none;
   }
   .search {
     min-width: 100%;
