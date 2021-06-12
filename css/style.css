@@ -12,7 +12,7 @@
           align-items: center;
 }
 
-.tabs__section, .tabs__active, .section-one, .section-three__carousel--obj, .section-six__email, .section-five {
+.tabs__section, .tabs__active, .section-one, .section-three__carousel--obj, .section-six__email, .section-five, .section-five__testimonial {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,6 +450,10 @@
   cursor: pointer;
 }
 
+.section-one__heading--logoForSmall {
+  display: none;
+}
+
 .section-one__heading--navigation {
   list-style-type: none;
   width: 33%;
@@ -808,6 +812,17 @@
   .section-one__heading--logo {
     display: none;
   }
+  .section-one__heading--logoForSmall {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 15px;
+    left: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+  }
   .section-one__heading--navigation {
     width: 90%;
     height: 80%;
@@ -1099,9 +1114,13 @@
   }
 }
 
+:root {
+  --pseudo-text: '+';
+}
+
 .section-four {
   background-color: #f7f8f3;
-  min-height: 30rem;
+  min-height: 33rem;
   padding-top: 1rem;
 }
 
@@ -1111,9 +1130,8 @@
 }
 
 .accordion {
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
-  padding-top: 2rem;
+  padding: 2rem 0;
+  height: 100%;
 }
 
 .accordion__titMain {
@@ -1130,11 +1148,11 @@
   letter-spacing: 4px;
   font-size: 1.2rem;
   font-weight: 300;
-  padding-bottom: 15px;
+  padding: 0.8rem 0 0.5rem;
 }
 
 .accordion__title::before {
-  content: '+';
+  content: var(--pseudo-text);
   font-size: 2rem;
   margin: 0 8px 5px;
 }
@@ -1151,32 +1169,39 @@
 }
 
 .accordion__content {
-  display: none;
-  padding: 0 0 1rem 2.5rem;
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  height: 0;
+  opacity: 0;
+  padding: 0 0 1rem 2rem;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 .activeCon .accordion__content {
-  display: block;
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  height: 3rem;
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 @media screen and (max-width: 1024px) and (min-width: 549px) {
   .containerAcc {
-    width: 95%;
+    width: 70%;
     margin: 0 auto;
   }
   .accordion__title {
     letter-spacing: 3px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    padding-bottom: 12px;
+    padding-bottom: 13px;
   }
   .accordion__title::before {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 0 5px 5px;
+  }
+  .activeCon .accordion__content {
+    height: 4rem;
   }
 }
 
@@ -1198,6 +1223,9 @@
   .accordion__title::before {
     font-size: 1.6rem;
     margin: 0 5px 5px;
+  }
+  .activeCon .accordion__content {
+    height: 5rem;
   }
 }
 
@@ -1395,7 +1423,7 @@
 
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .section-six {
-    height: 65vh;
+    height: 30rem;
     padding-top: 2rem;
   }
   .section-six__line {
@@ -1447,11 +1475,9 @@
 }
 
 .section-five {
+  width: 100vw;
   position: relative;
   height: 50rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1461,11 +1487,44 @@
   background-position: center;
 }
 
+.section-five__slider {
+  margin: 0 auto;
+  border: 2px solid black;
+  width: 50vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+.section-five__testimonials {
+  position: relative;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.section-five__testimonial {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 .section-five__text {
   font-size: 1.25rem;
   line-height: 1.818;
   text-align: center;
-  width: 45rem;
+  width: 90%;
   margin: 0 auto;
   font-weight: 200;
   letter-spacing: 0.3rem;

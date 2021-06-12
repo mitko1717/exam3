@@ -1,3 +1,5 @@
+'use strict';
+
 //header
 
 // make transparency for fixed menu when scrolling
@@ -213,9 +215,11 @@ difference.addEventListener('click', () => {
   difference.classList.add('tabs__active');
 });
 
-let accordion = document.querySelector('.accordion');
-let items = accordion.querySelectorAll('.accordion__item');
-let title = accordion.querySelectorAll('.accordion__title');
+// accordion
+const accordion = document.querySelector('.accordion');
+const items = accordion.querySelectorAll('.accordion__item');
+const title = accordion.querySelectorAll('.accordion__title');
+const roots = document.querySelector(':root');
 
 function toggleAccordion() {
   let thisItem = this.parentNode;
@@ -223,6 +227,7 @@ function toggleAccordion() {
   items.forEach(item => {
     if (thisItem == item) {
       thisItem.classList.toggle('activeCon');
+      roots.style.setProperty('--pseudo-text', `"-"`);
       return;
     }
     item.classList.remove('activeCon');
@@ -230,3 +235,30 @@ function toggleAccordion() {
 }
 
 title.forEach(question => question.addEventListener('click', toggleAccordion));
+
+// slider with testimonials
+
+const sliderLine = document.querySelector('.section-five__testimonials');
+
+const prevBtn = document.querySelector('.section-five__arrows--leftArr');
+const nextBtn = document.querySelector('.section-five__arrows--rightArr');
+
+let offset = 0;
+const lengthlObj = document.querySelector('.section-five__testimonial');
+let width = lengthlObj.offsetWidth;
+
+nextBtn.addEventListener('click', function () {
+  offset = offset + width;
+  if (offset > width) {
+    offset = 0;
+  }
+  sliderLine.style.left = -offset + 'px';
+});
+
+prevBtn.addEventListener('click', function () {
+  offset = offset - width;
+  if (offset < 0) {
+    offset = width;
+  }
+  sliderLine.style.left = -offset + 'px';
+});
