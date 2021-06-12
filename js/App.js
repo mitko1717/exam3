@@ -162,8 +162,7 @@ menuIcon.addEventListener('click', closeSearch);
 menuIcon.addEventListener('click', closeModal);
 searchBtn.addEventListener('click', closeModal);
 login.addEventListener('click', closeSearch);
-// window.addEventListener('click', closeModal);
-// window.addEventListener('click', closeSearch);
+
 // section two
 
 // tabs
