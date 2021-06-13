@@ -279,10 +279,11 @@ const cartCounter = document.querySelector(
   '.section-one__heading--userBlock__item--span'
 );
 
-// let shopCounter = 0;
+let shopCounter = 0;
 
-// shopBtn.addEventListener('click', () => {
-//   shopCounter++;
-//   cartCounter.innerText = `2`;
-// });
-// console.log(shopCounter);
+const cartIncrease = () => {
+  shopCounter++;
+  cartCounter.innerHTML = `${shopCounter}`;
+};
+
+shopBtn.forEach(shop => shop.addEventListener('click', cartIncrease));
