@@ -192,33 +192,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabList = new TabList(buttonsContainer, tabs);
 });
 
-const whatIsCBD = document.querySelector('.whatIsCBD');
-const benefits = document.querySelector('.benefits');
-const difference = document.querySelector('.difference');
+// const whatIsCBD = document.querySelector('.whatIsCBD');
+// const benefits = document.querySelector('.benefits');
+// const difference = document.querySelector('.difference');
 
-whatIsCBD.addEventListener('click', () => {
-  whatIsCBD.classList.add('tabs__active');
-  benefits.classList.remove('tabs__active');
-  difference.classList.remove('tabs__active');
-});
+// whatIsCBD.addEventListener('click', () => {
+//   whatIsCBD.classList.add('tabs__active');
+//   benefits.classList.remove('tabs__active');
+//   difference.classList.remove('tabs__active');
+// });
 
-benefits.addEventListener('click', () => {
-  whatIsCBD.classList.remove('tabs__active');
-  benefits.classList.add('tabs__active');
-  difference.classList.remove('tabs__active');
-});
+// benefits.addEventListener('click', () => {
+//   whatIsCBD.classList.remove('tabs__active');
+//   benefits.classList.add('tabs__active');
+//   difference.classList.remove('tabs__active');
+// });
 
-difference.addEventListener('click', () => {
-  whatIsCBD.classList.remove('tabs__active');
-  benefits.classList.remove('tabs__active');
-  difference.classList.add('tabs__active');
-});
+// difference.addEventListener('click', () => {
+//   whatIsCBD.classList.remove('tabs__active');
+//   benefits.classList.remove('tabs__active');
+//   difference.classList.add('tabs__active');
+// });
 
 // accordion
 const accordion = document.querySelector('.accordion');
-const items = accordion.querySelectorAll('.accordion__item');
-const title = accordion.querySelectorAll('.accordion__title');
-const roots = document.querySelector(':root');
+const items = document.querySelectorAll('.accordion__item');
+const title = document.querySelectorAll('.accordion__title');
+const titleSpans = document.querySelectorAll('.accordion__title--span');
 
 function toggleAccordion() {
   let thisItem = this.parentNode;
@@ -226,38 +226,63 @@ function toggleAccordion() {
   items.forEach(item => {
     if (thisItem == item) {
       thisItem.classList.toggle('activeCon');
-      roots.style.setProperty('--pseudo-text', `"-"`);
       return;
     }
     item.classList.remove('activeCon');
   });
 }
+// const togglePlusMinus = () => {
+//   titleSpans.forEach(span => {
+//     if (span.textContent === '+') {
+//       span.textContent = '-';
+//     }
+//   });
+// };
 
 title.forEach(question => question.addEventListener('click', toggleAccordion));
+// title.forEach(question => question.addEventListener('click', togglePlusMinus));
 
+///
 // slider with testimonials
-
-const sliderLine = document.querySelector('.section-five__testimonials');
 
 const prevBtn = document.querySelector('.section-five__arrows--leftArr');
 const nextBtn = document.querySelector('.section-five__arrows--rightArr');
 
-let offset = 0;
-const lengthlObj = document.querySelector('.section-five__testimonial');
-let width = lengthlObj.offsetWidth;
+const carouselSlider = document.querySelector('.section-five__testimonials');
+const carouselPart = document.querySelectorAll('.section-five__testimonial');
 
-nextBtn.addEventListener('click', function () {
-  offset = offset + width;
-  if (offset > width) {
-    offset = 0;
+let counter = 0;
+const size = carouselPart[0].clientWidth;
+
+carouselSlider.style.transform = 'translateX(' + -size * counter + 'px)';
+
+nextBtn.addEventListener('click', () => {
+  counter++;
+  carouselSlider.style.transform = 'translateX(' + -size * counter + 'px)';
+
+  if (counter >= carouselPart.length) {
+    carouselSlider.style.transform = 'translateX(0px)';
+    counter = 0;
   }
-  sliderLine.style.left = -offset + 'px';
 });
 
-prevBtn.addEventListener('click', function () {
-  offset = offset - width;
-  if (offset < 0) {
-    offset = width;
-  }
-  sliderLine.style.left = -offset + 'px';
+prevBtn.addEventListener('click', () => {
+  if (counter <= 0) return;
+  counter--;
+  carouselSlider.style.transform = 'translateX(' + -size * counter + 'px)';
 });
+
+// adding to Cart
+
+const shopBtn = document.querySelectorAll('.obj__info--btn');
+const cartCounter = document.querySelector(
+  '.section-one__heading--userBlock__item--span'
+);
+
+// let shopCounter = 0;
+
+// shopBtn.addEventListener('click', () => {
+//   shopCounter++;
+//   cartCounter.innerText = `2`;
+// });
+// console.log(shopCounter);
