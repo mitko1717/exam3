@@ -192,27 +192,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabList = new TabList(buttonsContainer, tabs);
 });
 
-// const whatIsCBD = document.querySelector('.whatIsCBD');
-// const benefits = document.querySelector('.benefits');
-// const difference = document.querySelector('.difference');
+const whatIsCBD = document.querySelector('.whatIsCBD');
+const benefits = document.querySelector('.benefits');
+const difference = document.querySelector('.difference');
 
-// whatIsCBD.addEventListener('click', () => {
-//   whatIsCBD.classList.add('tabs__active');
-//   benefits.classList.remove('tabs__active');
-//   difference.classList.remove('tabs__active');
-// });
+whatIsCBD.addEventListener('click', () => {
+  whatIsCBD.classList.add('tabs__active');
+  benefits.classList.remove('tabs__active');
+  difference.classList.remove('tabs__active');
+});
 
-// benefits.addEventListener('click', () => {
-//   whatIsCBD.classList.remove('tabs__active');
-//   benefits.classList.add('tabs__active');
-//   difference.classList.remove('tabs__active');
-// });
+benefits.addEventListener('click', () => {
+  whatIsCBD.classList.remove('tabs__active');
+  benefits.classList.add('tabs__active');
+  difference.classList.remove('tabs__active');
+});
 
-// difference.addEventListener('click', () => {
-//   whatIsCBD.classList.remove('tabs__active');
-//   benefits.classList.remove('tabs__active');
-//   difference.classList.add('tabs__active');
-// });
+difference.addEventListener('click', () => {
+  whatIsCBD.classList.remove('tabs__active');
+  benefits.classList.remove('tabs__active');
+  difference.classList.add('tabs__active');
+});
 
 // accordion
 const accordion = document.querySelector('.accordion');
@@ -287,3 +287,13 @@ const cartIncrease = () => {
 };
 
 shopBtn.forEach(shop => shop.addEventListener('click', cartIncrease));
+
+// Slider
+document.addEventListener('DOMContentLoaded', function () {
+  new ChiefSlider('.slider', {
+    loop: true,
+    interval: 3000,
+    swipe: true,
+    refresh: false,
+  });
+});
