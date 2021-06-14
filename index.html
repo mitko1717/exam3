@@ -81,18 +81,24 @@
         <h4 class="section-one__content--subtitle">
           Choose Wisely. Choose CBD.
         </h4>
-        <div class="section-one__content--transfer transfer1">
+        <a
+          data-section="section-three"
+          class="section-one__content--transfer transfer1"
+        >
           <div class="section-one__content--transfer__text">Start Shopping</div>
           <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
           <img src="img/line.png" alt="line" class="notactive" />
-        </div>
-        <div class="section-one__content--transfer transfer2">
+        </a>
+        <a
+          data-section="section-three"
+          class="section-one__content--transfer transfer2"
+        >
           <div class="section-one__content--transfer__text">
             See all products
           </div>
           <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
           <img src="img/line.png" alt="line" class="notactive" />
-        </div>
+        </a>
       </div>
 
       <div class="section-one__arrow-down">
@@ -128,7 +134,7 @@
       </div>
 
       <form id="search" class="search">
-        <input type="search" placeholder="search" class="search__input" />
+        <input type="search" placeholder="Search" class="search__input" />
         <button class="search__btn">
           <i class="fa fa-search" aria-hidden="true"></i>
         </button>
@@ -144,8 +150,10 @@
       <section class="container">
         <div class="tabs">
           <div class="tabs__box">
-            <div class="whatIsCBD tabs__section tab--1 tabs__active">
-              <p class="tabs__title button" data-value="1">what is cbd</p>
+            <div class="whatIsCBD tabs__section tab--1">
+              <p class="tabs__title button tabs__active" data-value="1">
+                what is cbd
+              </p>
             </div>
             <div class="benefits tabs__section tab--2">
               <h4 class="tabs__title button" data-value="2">benefits</h4>
@@ -221,7 +229,7 @@
 
     <!-- ChiefSlider -->
 
-    <div class="slider">
+    <div id="section-three" class="slider section-three section">
       <h3 class="section-three__title title">CBD Featured Products</h3>
       <div class="slider__container">
         <div class="slider__wrapper">
@@ -235,7 +243,6 @@
                   <p class="obj__info--price">$49.99 USD</p>
                   <button class="obj__info--btn">
                     <p class="section-five__text">SHOP</p>
-                    <img src="img/line.png" alt="line" />
                   </button>
                 </div>
               </div>
@@ -249,7 +256,6 @@
                   <p class="obj__info--price">$49.99 USD</p>
                   <button class="obj__info--btn">
                     <p class="section-five__text">SHOP</p>
-                    <img src="img/line.png" alt="line" />
                   </button>
                 </div>
               </div>
@@ -262,7 +268,6 @@
                   <p class="obj__info--price">$79.99 USD</p>
                   <button class="obj__info--btn">
                     <p class="section-five__text">SHOP</p>
-                    <img src="img/line.png" alt="line" />
                   </button>
                 </div>
               </div>
@@ -311,13 +316,9 @@
           </div>
         </div>
       </div>
-      <!-- Кнопки для перехода к предыдущему и следующему слайду -->
-      <button class="slider__control" data-slide="prev">
-        <!-- <img src="img/arrl.png" /> -->
-      </button>
-      <button class="slider__control" data-slide="next">
-        <!-- <img src="img/arrr.png" /> -->
-      </button>
+
+      <button class="slider__control" data-slide="prev"></button>
+      <button class="slider__control" data-slide="next"></button>
     </div>
     <!-- ChiefSlider -->
 

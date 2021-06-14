@@ -21,7 +21,6 @@ arrowDown.addEventListener('click', function () {
 
   window.scrollTo({
     top: elementPosition - 80,
-    // behavior: 'smooth',
   });
 });
 
@@ -32,8 +31,7 @@ productsBtn.addEventListener('click', function () {
   const elementPosition = document.getElementById('section-three').offsetTop;
 
   window.scrollTo({
-    top: elementPosition - 50,
-    // behavior: 'smooth',
+    top: elementPosition - 80,
   });
 });
 
@@ -43,9 +41,23 @@ faqsBtn.addEventListener('click', function () {
 
   window.scrollTo({
     top: elementPosition - 60,
-    // behavior: 'smooth',
   });
 });
+
+const transferBtns = document.querySelectorAll(
+  '.section-one__content--transfer'
+);
+
+// scroll to products clickin on Header
+transferBtns.forEach(e =>
+  e.addEventListener('click', function () {
+    const elementPosition = document.getElementById('section-three').offsetTop;
+
+    window.scrollTo({
+      top: elementPosition - 80,
+    });
+  })
+);
 
 // changing paginations of navbar
 
@@ -75,13 +87,6 @@ const isSectionVisible = e => {
 
 window.addEventListener('scroll', isSectionVisible);
 
-// console.log(
-//   `sectionID ${sectionId},sectionBottom ${sectionBottom} , isHalfShown ${isHalfShown}, isNotScrolledPast ${isNotScrolledPast}`
-// );
-// console.log(
-//   `section.offsetTop ${section.offsetTop}, section.clientHeight ${section.clientHeight}, window.innerHeight ${window.innerHeight}, window.scrollY ${window.scrollY} `
-// );
-
 // creating Modal Login
 const modalCloseOutside = document.querySelector('section-one');
 const login = document.querySelector('.login');
@@ -105,23 +110,29 @@ closeTheModal();
 modalClose.addEventListener('click', closeTheModal);
 
 // tabs for Modal Login
+
 const loginBtn = document.querySelector('.modal__inner--login');
 const createAccBtn = document.querySelector('.modal__inner--newAcc');
 const loginForm = document.querySelector('.loginForm');
 const newAccForm = document.querySelector('.newAccForm');
 
 loginBtn.addEventListener('click', () => {
-  loginBtn.classList.add('activeEnter');
-  createAccBtn.classList.remove('activeEnter');
   newAccForm.classList.add('notActiveForm');
   loginForm.classList.remove('notActiveForm');
 });
 
 createAccBtn.addEventListener('click', () => {
-  loginBtn.classList.remove('activeEnter');
-  createAccBtn.classList.add('activeEnter');
   newAccForm.classList.remove('notActiveForm');
   loginForm.classList.add('notActiveForm');
+});
+
+const allLogins = document.querySelectorAll('.tabcontent');
+
+allLogins.forEach(form => {
+  form.addEventListener('click', e => {
+    allLogins.forEach(form => form.classList.remove('activeEnter'));
+    e.target.classList.add('activeEnter');
+  });
 });
 
 // creating Modal Search
@@ -192,26 +203,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabList = new TabList(buttonsContainer, tabs);
 });
 
-const whatIsCBD = document.querySelector('.whatIsCBD');
-const benefits = document.querySelector('.benefits');
-const difference = document.querySelector('.difference');
+// switch tab heading
 
-whatIsCBD.addEventListener('click', () => {
-  whatIsCBD.classList.add('tabs__active');
-  benefits.classList.remove('tabs__active');
-  difference.classList.remove('tabs__active');
-});
+const allTabs = document.querySelectorAll('.tabs__title');
 
-benefits.addEventListener('click', () => {
-  whatIsCBD.classList.remove('tabs__active');
-  benefits.classList.add('tabs__active');
-  difference.classList.remove('tabs__active');
-});
-
-difference.addEventListener('click', () => {
-  whatIsCBD.classList.remove('tabs__active');
-  benefits.classList.remove('tabs__active');
-  difference.classList.add('tabs__active');
+allTabs.forEach(tab => {
+  tab.addEventListener('click', e => {
+    allTabs.forEach(tab => tab.classList.remove('tabs__active'));
+    e.target.classList.add('tabs__active');
+  });
 });
 
 // accordion
@@ -231,16 +231,8 @@ function toggleAccordion() {
     item.classList.remove('activeCon');
   });
 }
-// const togglePlusMinus = () => {
-//   titleSpans.forEach(span => {
-//     if (span.textContent === '+') {
-//       span.textContent = '-';
-//     }
-//   });
-// };
 
 title.forEach(question => question.addEventListener('click', toggleAccordion));
-// title.forEach(question => question.addEventListener('click', togglePlusMinus));
 
 ///
 // slider with testimonials

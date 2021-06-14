@@ -15,6 +15,7 @@
 
 .slider__container {
   overflow: hidden;
+  margin: 2rem 0;
 }
 
 /* .slider__wrapper {
@@ -40,7 +41,7 @@
 
 .slider__control {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,6 +50,7 @@
   border: none;
   cursor: pointer;
   background: #6e774a;
+  transition: all 0.5s ease;
 }
 
 .slider__control_hide {

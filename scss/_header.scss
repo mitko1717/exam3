@@ -104,7 +104,17 @@
       justify-content: flex-end;
       width: 20rem;
       margin: 0.2rem 0;
-      vertical-align: middle;
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+
+      &:hover,
+      &:active {
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        transform: scaleX(1.2) translateX(-10%);
+      }
 
       &__text {
         margin-right: 1rem;
@@ -260,6 +270,9 @@
     color: rgb(110, 119, 74);
     font-size: 1.2rem;
     font-weight: 300;
+    &::placeholder {
+      opacity: 0.7;
+    }
   }
 
   &__btn {
@@ -286,6 +299,11 @@
 
 .notActiveForm {
   display: none;
+}
+
+.scaleAnimation {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 769px) {

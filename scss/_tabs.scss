@@ -38,28 +38,23 @@
   }
 
   &__section {
-    @extend %flex-col;
-    opacity: 0.5;
     cursor: pointer;
     height: 100%;
     margin-bottom: -2px;
   }
 
-  &__active {
-    opacity: 1;
-    border-bottom: 2px solid #000;
-    height: 100%;
-    @extend %flex-col;
-    outline: none;
-  }
-
   &__title {
+    opacity: 0.5;
     font-size: 1.9rem;
     color: rgb(28, 28, 27);
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     font-weight: 300;
     padding-top: 0.4rem;
+  }
+  &__active {
+    opacity: 1;
+    border-bottom: 2px solid #000;
   }
 }
 
@@ -133,7 +128,7 @@
 }
 @media screen and (max-width: 1024px) and (min-width: 769px) {
   .section-two {
-    height: 85vh;
+    height: 100vh;
     padding-top: 2rem;
     &__banner {
       border: 11px solid $colorGreenish;
