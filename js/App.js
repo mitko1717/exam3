@@ -24,7 +24,7 @@ arrowDown.addEventListener('click', function () {
   });
 });
 
-// scroll to products clickin Products and FAQ
+// scroll to products clickin Products, FAQ and Feedback
 
 const productsBtn = document.querySelector('.products');
 productsBtn.addEventListener('click', function () {
@@ -48,6 +48,14 @@ const transferBtns = document.querySelectorAll(
   '.section-one__content--transfer'
 );
 
+const feedbackBtn = document.querySelector('.feedback');
+feedbackBtn.addEventListener('click', function () {
+  const elementPosition = document.getElementById('section-five').offsetTop;
+
+  window.scrollTo({
+    top: elementPosition - 80,
+  });
+});
 // scroll to products clickin on Header
 transferBtns.forEach(e =>
   e.addEventListener('click', function () {
