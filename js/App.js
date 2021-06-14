@@ -297,3 +297,7 @@ document.addEventListener('DOMContentLoaded', function () {
     refresh: false,
   });
 });
+
+// scroll reveal
+
+ScrollReveal().reveal('.section-two');
