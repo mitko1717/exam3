@@ -299,5 +299,30 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // scroll reveal
-
-ScrollReveal().reveal('.section-two');
+ScrollReveal().reveal(
+  '.section-two__banner',
+  { delay: 300 },
+  { duration: 500 },
+  { interval: 600 }
+);
+ScrollReveal().reveal('.container', { delay: 300 }, { duration: 500 });
+ScrollReveal().reveal(
+  '.slider__container',
+  { delay: 100, reset: true },
+  { duration: 500 },
+  { easing: 'ease-in' },
+  { interval: 600 }
+);
+ScrollReveal().reveal(
+  '.containerAcc',
+  { delay: 300 },
+  { duration: 300 },
+  { easing: 'ease-in' },
+  { interval: 900 }
+);
+ScrollReveal().reveal(
+  '.section-five__slider',
+  { easing: 'ease-in' },
+  { delay: 700 },
+  { duration: 500 }
+);
