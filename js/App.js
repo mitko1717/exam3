@@ -40,7 +40,7 @@ faqsBtn.addEventListener('click', function () {
   const elementPosition = document.getElementById('section-four').offsetTop;
 
   window.scrollTo({
-    top: elementPosition - 60,
+    top: elementPosition - 150,
   });
 });
 

@@ -223,7 +223,7 @@
 
 @media screen and (max-width: 768px) and (min-width: 480px) {
   .section-two {
-    height: 80vh;
+    height: 95vh;
     padding-top: 1rem;
   }
   .section-two__banner {
@@ -442,6 +442,8 @@
   text-align: center;
   font-size: 1.9rem;
   font-weight: 500;
+  text-decoration: none;
+  color: white;
 }
 
 .section-one__heading--logo:hover {
