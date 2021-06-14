@@ -10,7 +10,7 @@
 .slider {
   background-color: #f7f8f3;
   position: relative;
-  padding: 5rem 0;
+  padding: 5rem 0 10rem;
 }
 
 .slider__container {
@@ -40,16 +40,15 @@
 
 .slider__control {
   position: absolute;
-  top: 50%;
+  bottom: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  color: #fff;
-  text-align: center;
-  height: 50px;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.2);
+  width: 80px;
+  height: 80px;
+  border: none;
+  cursor: pointer;
+  background: #6e774a;
 }
 
 .slider__control_hide {
@@ -57,28 +56,27 @@
 }
 
 .slider__control[data-slide='prev'] {
-  left: 0;
+  left: 47%;
+  transform: translateX(-50%);
 }
 
 .slider__control[data-slide='next'] {
-  right: 0;
+  right: 47%;
+  transform: translateX(50%);
 }
 
 .slider__control:hover,
-.slider__control:focus {
+.slider__control:active {
   color: #fff;
   text-decoration: none;
-  outline: 0;
-  background: rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
 }
 
 .slider__control::before {
   content: '';
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: transparent no-repeat center center;
-  background-size: 100% 100%;
+  width: 30px;
+  height: 30px;
+  color: #f7f8f3;
 }
 
 .slider__control[data-slide='prev']::before {
@@ -91,7 +89,7 @@
 
 /* индикаторы */
 
-.slider__indicators {
+/* .slider__indicators {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -124,16 +122,46 @@
 
 .slider__indicators li.active {
   background-color: rgba(255, 255, 255, 0.9);
-}
+} */
 @media screen and (max-width: 1222px) and (min-width: 769px) {
   .slider__item {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+
+  .slider__control {
+    width: 70px;
+    height: 70px;
+  }
+
+  .slider__control[data-slide='prev'] {
+    left: 43%;
+    transform: translateX(-50%);
+  }
+
+  .slider__control[data-slide='next'] {
+    right: 43%;
+    transform: translateX(50%);
   }
 }
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .slider__item {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .slider__control {
+    width: 60px;
+    height: 60px;
+  }
+
+  .slider__control[data-slide='prev'] {
+    left: 35%;
+    transform: translateX(-50%);
+  }
+
+  .slider__control[data-slide='next'] {
+    right: 35%;
+    transform: translateX(50%);
   }
 }
